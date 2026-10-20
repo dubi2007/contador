@@ -1,0 +1,58 @@
+<html>
+  <head> </head>
+
+  <style>
+    .container {
+      background-color: #f2f2f2;
+    }
+  </style>
+  <main class="container">
+    <div class="+1">
+      <div class="contador_+1">
+        <button id="Cont_+1">
+          <p>+1</p>
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <div class="contador_muestra" id="contador">
+        <p>0</p>
+      </div>
+    </div>
+
+    <div class="-1">
+      <div class="contador_-1">
+        <button id="Cont_-1">
+          <p>-1</p>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let contador = 0;
+    let contadorElemento = document.getElementById("contador");
+    let botonMas = document.getElementById("Cont_+1");
+    let botonMenos = document.getElementById("Cont_-1");
+
+    botonMas.addEventListener("click", function() {
+        contador++;});
+
+     botonMenos.addEventListener("click", function() {
+        contador--;});
+
+    contadorElemento.innerHTML = contador;
+    botonMas.addEventListener("click", function() {
+        contadorElemento.innerHTML = contador;
+    });
+
+    botonMenos.addEventListener("click", function() {
+        contadorElemento.innerHTML = contador;
+    });
+    
+
+
+
+  </script>
+</html>
